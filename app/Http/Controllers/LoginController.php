@@ -16,7 +16,7 @@ class LoginController extends Controller
     public function authenticate(Request $request)
     {
         // grab credentials from the request
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('username', 'password');
 
         try {
             // attempt to verify the credentials and create a token for the user

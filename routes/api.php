@@ -19,5 +19,6 @@ Route::get('me', 'LoginController@getAuthenticatedUser');
 Route::group(['prefix' => 'v1', 'middleware'=>'auth:api'], function () {
 
     Route::apiResource('categories', 'CategoryController');
+    Route::post('categories/name', 'CategoryController@index');
 
 });
